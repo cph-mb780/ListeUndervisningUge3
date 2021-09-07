@@ -76,10 +76,11 @@ public boolean isEmpty()
             head = null;
             return null;
         }
-
+        String n = head.name;
         head.next.prev = null;
         head = head.next;
-        return head.name;
+
+        return n;
     }
 
     public String removeFromTail() {
@@ -94,9 +95,9 @@ public boolean isEmpty()
             tail = null;
             return null;
         }
-
+        String n = tail.name;
         tail.prev.next = null;
         tail = tail.prev;
-        return tail.name;
+        return n;
     }
 }

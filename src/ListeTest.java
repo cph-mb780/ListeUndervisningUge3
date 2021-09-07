@@ -40,7 +40,9 @@ Liste liste = new Liste();
         liste.insertFromHead("3");
         liste.insertFromHead("4");
 //Returns new head.
-        assertEquals("3", liste.removeFromHead());
+        liste.printFromHead();
+        assertEquals("4", liste.removeFromHead());
+        liste.printFromHead();
     }
 
     @Test
@@ -51,6 +53,8 @@ Liste liste = new Liste();
         liste.insertFromHead("4");
 
 //Returns new tail.
-        assertEquals("2", liste.removeFromTail());
+        liste.printFromTail();
+        assertEquals("1", liste.removeFromTail());
+        liste.printFromTail();
     }
 }
