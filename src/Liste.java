@@ -26,4 +26,22 @@ public boolean isEmpty()
         head = node;
         return head;
     }
+
+    public String printFromHead() {
+        Node n = head;
+        String result = "";
+
+        if(isEmpty())
+        {
+            System.out.println("List is empty");
+        }
+
+        while(n != null)
+        {
+            result += n.name;
+            n = n.next;
+        }
+        System.out.println(result);
+        return result;
+    }
 }
