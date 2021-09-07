@@ -23,4 +23,13 @@ Liste liste = new Liste();
 
         assertEquals("321", liste.printFromHead());
     }
+
+    @Test
+    void printListFromTail() {
+        liste.insertFromHead("1");
+        liste.insertFromHead("2");
+        liste.insertFromHead("3");
+
+        assertEquals("123", liste.printFromTail());
+    }
 }

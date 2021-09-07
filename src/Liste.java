@@ -44,4 +44,21 @@ public boolean isEmpty()
         System.out.println(result);
         return result;
     }
+
+    public String printFromTail() {
+    Node n = tail;
+    String result = "";
+
+    if (isEmpty())
+    {
+        System.out.println("List is empty");
+    }
+
+    while(n != null)
+    {
+        result += n.name;
+        n = n.prev;
+    }
+    return result;
+    }
 }
