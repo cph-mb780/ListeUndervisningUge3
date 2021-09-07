@@ -59,6 +59,44 @@ public boolean isEmpty()
         result += n.name;
         n = n.prev;
     }
-    return result;
+        System.out.println(result);
+        return result;
+    }
+
+    public String removeFromHead() {
+
+        if(isEmpty())
+        {
+            System.out.println("List is empty");
+            return null;
+        }
+
+        if(head == tail)
+        {
+            head = null;
+            return null;
+        }
+
+        head.next.prev = null;
+        head = head.next;
+        return head.name;
+    }
+
+    public String removeFromTail() {
+        if(isEmpty())
+        {
+            System.out.println("List is empty");
+            return null;
+        }
+
+        if(head == tail)
+        {
+            tail = null;
+            return null;
+        }
+
+        tail.prev.next = null;
+        tail = tail.prev;
+        return tail.name;
     }
 }
