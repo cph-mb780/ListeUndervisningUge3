@@ -1,19 +1,29 @@
 public class Liste {
     Node head = null;
     Node tail = null;
-
-    public Node insertFromHead (Node n)
+public boolean isEmpty()
+{
+    if(head == null)
     {
-        if(head == null)
+        return true;
+    }
+    return false;
+}
+
+    public Node insertFromHead (String s)
+    {
+        Node node = new Node(s);
+
+        if(isEmpty())
         {
-            head = n;
-            tail = n;
+            head = node;
+            tail = node;
             return head;
         }
 
-        head.prev = n;
-        n.next = head;
-        head = n;
+        head.prev = node;
+        node.next = head;
+        head = node;
         return head;
     }
 }
